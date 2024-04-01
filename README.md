@@ -52,12 +52,12 @@ _Note: we used absolute paths in the code. Please modify the paths accordingly._
 python src/preprocessing/generate_org_json.py
 ```
 ### Image Enhancement using NAFNet
-We directly use the pre-trained model **NAFNet-REDS-width64** from the [NAFNet](https://github.com/megvii-research/NAFNet) official github repo.
+We directly use the pre-trained model **NAFNet-REDS-width64** from the [NAFNet](https://github.com/megvii-research/NAFNet) official GitHub repo.
 ```
 python src/lib/NAFNet/nafnet_inference.py
 ```
 ### Convert to day-light images using GSAD
-Pre-trained model [GSAD](https://github.com/jinnh/GSAD) is used to convert the night images to day-like images. Pre-trained model on LOLv2Syn dataset is used.
+Pre-trained model [GSAD](https://github.com/jinnh/GSAD) is used to convert the night images to day-like images. Pre-trained model on the LOLv2Syn dataset is used.
 ```
 sh src/lib/GSAD/convert_day_like.sh
 ```
@@ -67,7 +67,7 @@ python src/preprocessing/generate_final_dataset.py
 ```
 ## Training Co-DETR
 Here we show how to train the CO-DETR model on the FishEye8K dataset. 
-Other models such as [YOLOv8](https://github.com/ultralytics/ultralytics), [YOLOv9](https://github.com/WongKinYiu/yolov9) are trained base on their original github repositories.
+Other models such as [YOLOv8](https://github.com/ultralytics/ultralytics), [YOLOv9](https://github.com/WongKinYiu/yolov9) are trained based on their original GitHub repositories.
 ```
 sh tools/dist_train.sh projects/CO-DETR/configs/codino/swinL_detr_o365_coco.py 2
 ```
@@ -80,7 +80,7 @@ python basicsr/test.py -opt options/Test/convert_CVPR_test.yaml
 ## Inference for submission on CVPR test set
 Download the super-resolution test images in [here](https://drive.google.com/drive/folders/1mqTm7k5I1S1lBULDyg2hn5Ybp5KvM5KI?usp=sharing). 
 
-Download all pret-rained models in [here](https://drive.google.com/drive/folders/1r6YZBC8Z8moq7nrVH7UVj1JxFhMfFTuN?usp=drive_link)
+Download all pre-trained models in [here](https://drive.google.com/drive/folders/1r6YZBC8Z8moq7nrVH7UVj1JxFhMfFTuN?usp=drive_link)
 ```
 python src/inference4submission.py
 ```
