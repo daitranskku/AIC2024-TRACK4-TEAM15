@@ -34,8 +34,8 @@ mmdet_checkpoint1 = './pretrained_weights/codetrSwinLO365_nafnet_kfold1_2048_16_
 mmdet_config2 = './pretrained_weights/codetrSwinLO365_nafnet_kfold1_1568_12/swinL_detr_o365_coco_nafnet.py'
 mmdet_checkpoint2 = './pretrained_weights/codetrSwinLO365_nafnet_kfold1_1568_12/epoch_24.pth'
 
-mmdet_config3 = './pretrained_weights/train_val_org/codetr_nafnet_night2day_1536_0489/swinL_detr_o365_coco_nafnet.py'
-mmdet_checkpoint3 = './pretrained_weights/train_val_org/codetr_nafnet_night2day_1536_0489/epoch_6_best.pth'
+mmdet_config3 = './pretrained_weights/codetr_nafnet_night2day_1536_0489/swinL_detr_o365_coco_nafnet.py'
+mmdet_checkpoint3 = './pretrained_weights/codetr_nafnet_night2day_1536_0489/epoch_6_best.pth'
 
 mmdet_config4 = './pretrained_weights/codetrSwinLO365_nafnet_kfold3_2048_16_3019_071/swinL_detr_o365_coco_nafnet (1).py'
 mmdet_checkpoint4 = './pretrained_weights/codetrSwinLO365_nafnet_kfold3_2048_16_3019_071/epoch_16 (1).pth'
@@ -49,20 +49,20 @@ mmdet_checkpoint6 = './pretrained_weights/codetrSwinLO365_nafnet_kfold5_2048_16_
 mmdet_config7 = './pretrained_weights/codetrSwinLO365_nafnet_kfold2_1568_16_/swinL_detr_o365_coco_nafnet.py'
 mmdet_checkpoint7 = './pretrained_weights/codetrSwinLO365_nafnet_kfold2_1568_16_/epoch_10.pth'
 
-mmdet_config8 = './pretrained_weights/train_all/codetr_trainall_nigh2day_1536/swinL_detr_o365_coco_nafnet.py'
-mmdet_checkpoint8 = './pretrained_weights/train_all/codetr_trainall_nigh2day_1536/epoch_24 (1).pth'
+mmdet_config8 = './pretrained_weights/codetr_trainall_nigh2day_1536/swinL_detr_o365_coco_nafnet.py'
+mmdet_checkpoint8 = './pretrained_weights/codetr_trainall_nigh2day_1536/epoch_24 (1).pth'
 
-mmdet_config9 = './pretrained_weights/train_all/pseudo_codetr_1536/swinL_detr_o365_coco_nafnet.py'
-mmdet_checkpoint9 = './pretrained_weights/train_all/pseudo_codetr_1536/epoch_32.pth'
+mmdet_config9 = './pretrained_weights/pseudo_codetr_1536/swinL_detr_o365_coco_nafnet.py'
+mmdet_checkpoint9 = './pretrained_weights/pseudo_codetr_1536/epoch_32.pth'
 
-mmdet_config10 = './pretrained_weights/train_all/pseudo_codetr_1024/swinL_detr_o365_coco_nafnet.py'
-mmdet_checkpoint10 = './pretrained_weights/train_all/pseudo_codetr_1024/epoch_29.pth'
+mmdet_config10 = './pretrained_weights/pseudo_codetr_1024/swinL_detr_o365_coco_nafnet.py'
+mmdet_checkpoint10 = './pretrained_weights/pseudo_codetr_1024/epoch_29.pth'
 
 # Yolo models
 # yolov8x
-yolo_checkpoint1 = './pretrained_weights/train_all/yolov8_trainall/best.pt'
+yolo_checkpoint1 = './pretrained_weights/yolov8_trainall/best.pt'
 # Yolov9e
-yolov9_checkpoint1 = './pretrained_weights/train_all/yolov9_trainall/best.pt'
+yolov9_checkpoint1 = './pretrained_weights/yolov9_trainall/best.pt'
 
 # Load MMDet models
 # print('Loading SAHI models...')
@@ -120,8 +120,8 @@ colors_dict ={'Bus':(255, 0, 0),
  'Truck': (255, 0, 255)}
 mapping_dict = {0:'Bus', 1:'Bike', 2:'Car', 3:'Pedestrian', 4:'Truck'}
 
-TEST_DIR = '/home/daitranskku/code/cvpr2024/aicity/DAT/CVPR_TEST/visualization/Single'
-ORG_CVPR_DIR = '/home/daitranskku/code/cvpr2024/aicity/final_preprocessing_src/CPVR_test_nafnet'
+TEST_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/src/lib/infer_DAT/results/test_single_x4/visualization'
+ORG_CVPR_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/CVPR_test'
 test_image_file_names = os.listdir(TEST_DIR)
 # extract .png only
 test_image_file_names = [f for f in test_image_file_names if f.endswith('.png')]

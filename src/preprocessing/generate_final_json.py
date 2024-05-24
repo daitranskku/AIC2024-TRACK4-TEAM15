@@ -36,11 +36,11 @@ def generate_final_images(org_json, DAY_DIR, day_image_names, NAFNET_DIR):
 
 VISUALIZE = True
 print("GENERATE FINAL TRAIN JSON")
-org_json_path = '/home/daitranskku/code/cvpr2024/aicity/github_submission/src/preprocessing/train_raw_fisheye8k.json'
+org_json_path = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/train_raw_fisheye8k.json'
 org_json = json.load(open(org_json_path))
-DAY_DIR = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/GSAD_Output/train'
+DAY_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/GSAD_Output/train'
 day_image_names = os.listdir(DAY_DIR)
-NAFNET_DIR = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/NAFNet_Output/train'
+NAFNET_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/NAFNet_Output/train'
 json_data = generate_final_images(org_json, DAY_DIR, day_image_names, NAFNET_DIR)
 if VISUALIZE:
     image_info = random.choice(json_data['images'])
@@ -68,11 +68,11 @@ with open("nafnet_train_night2day.json", "w") as train_file:
     json.dump(json_data, train_file)
 
 print("GENERATE FINAL VAL JSON")
-org_json_path = '/home/daitranskku/code/cvpr2024/aicity/github_submission/src/preprocessing/val_raw_fisheye8k.json'
+org_json_path = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/val_raw_fisheye8k.json'
 org_json = json.load(open(org_json_path))
-DAY_DIR = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/GSAD_Output/val'
+DAY_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/GSAD_Output/val'
 day_image_names = os.listdir(DAY_DIR)
-NAFNET_DIR = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/NAFNet_Output/val'
+NAFNET_DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/NAFNet_Output/val'
 json_data = generate_final_images(org_json, DAY_DIR, day_image_names, NAFNET_DIR)
 if VISUALIZE:
     image_info = random.choice(json_data['images'])

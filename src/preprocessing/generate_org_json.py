@@ -9,12 +9,11 @@ import random
 import numpy as np
 import json
 
-DIR = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/FishEye8K'
 TRAIN_FOLDERS =  ['train/images']
-VAL_FOLDERS = ['val/images']
-
-TRAIN_ANNOTATION_PATH = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/FishEye8K/train/labels'
-VAL_ANNOTATION_PATH = '/home/daitranskku/code/cvpr2024/aicity/github_submission/sample_dataset/FishEye8K/val/labels'
+VAL_FOLDERS = ['test/images']
+DIR = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/Fisheye8K_all_including_train&test'
+TRAIN_ANNOTATION_PATH = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/Fisheye8K_all_including_train&test/train/annotations'
+VAL_ANNOTATION_PATH = '/home/daitranskku/code/cvpr2024/aicity/AIC2024-TRACK4-TEAM15/sample_dataset/Fisheye8K_all_including_train&test/test/annotations'
 
 VISUALIZE = True
 
