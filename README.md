@@ -10,7 +10,7 @@ Our methodology is visually encapsulated in the figures below, demonstrating our
 ![figure2](./figures/sample_results.png)
 
 ## Updates
-Our paper is posted on [arXiv](low-light image enhancement framework for improved object detection in fisheye lens datasets)!
+Our paper is posted on [arXiv](https://arxiv.org/abs/2404.10078)!
 
 ## Installation
 Here is the list of libraries used in this project:
