@@ -112,11 +112,52 @@ Converted images will be saved in the following directories:
 cd src/preprocessing
 python generate_final_dataset.py
 ```
+
+## Training YOLOv9
+Copy train, validation images and labels (.txt file from original FishEye8K) to the following directories:
+```
+"{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/images"
+"{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/labels"
+```
+Note: val and test folder using validation images.
+
+Run [yolov9_convert2txt.ipynb](./src/preprocessing/yolov9_convert2txt.ipynb) to export train_all.txt, train_txt_org.txt, test_txt_org.txt files.
+
+Modify [nafnet_trainorg](./src/lib/train_yolov9/data/nafnet_trainorg.yaml) yaml for training.
+```
+train: '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/train_txt_org.txt'
+val: '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/val_txt_org.txt'
+test: '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/test_txt_org.txt'
+```
+
+Download and install yolov9 from [YOLOv9](https://github.com/WongKinYiu/yolov9), train yolov9e on the FishEye8K dataset.
+```
+python -m torch.distributed.launch --nproc_per_node 2 --master_port 9092 train_dual.py --workers 16 --device 0,1 --sync-bn --batch 4 --data data/nafnet_trainorg.yaml --img 1280 --cfg models/detect/yolov9-e.yaml --weights 'yolov9-e.pt' --name nafnet_yolov9e_1280_trainorg --hyp hyp.scratch-high.yaml --min-items 0 --epochs 500 --close-mosaic 15
+```
+For training raw images, copy images directly from FishEye8K dataset. For training enhanced images, copy images from the NAFNet_Output directory.
+
+## Training YOLOv8
+
+Similarly, clone and install yolov8. Modify [nafnet_all_default.yaml](./src/lib/train_yolov8/nafnet_all_default.yaml)
+```
+train: '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/train2017/images'
+val: '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/src/preprocessing/val2017/images'
+
+nc: 5
+
+# Classes
+names: ['Bus','Bike','Car','Pedestrian','Truck']
+```
+
+Train model with the following command:
+```
+yolo task=detect mode=train model=yolov8x.pt imgsz=1280 data=nafnet_all_default.yaml epochs=400 batch=8 name=jan_nafnet_yolov8x_default_1280 --device=0,1
+```
+
+
 ## Training Co-DETR
 
-Here we show how to train the CO-DETR model on the FishEye8K dataset. 
-
-Other models such as [YOLOv8](https://github.com/ultralytics/ultralytics), [YOLOv9](https://github.com/WongKinYiu/yolov9) are trained base on their original github repositories.
+Here we show how to train the CO-DETR model on the FishEye8K dataset.
 
 Modify **ann_file** for train and val in [./src/lib/train_mmdet/projects/CO-DETR/configs/codino/r50_lsj.py](./src/lib/train_mmdet/projects/CO-DETR/configs/codino/r50_lsj.py)
 ```

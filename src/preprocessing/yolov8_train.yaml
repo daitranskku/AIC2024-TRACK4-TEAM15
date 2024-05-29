@@ -1,0 +1,7 @@
+train: '/SSD/1_Postdoc_SKKU_2023/Research/cvpr2024/aicity/preprocessing_data/final_preprocessing_dataset/sample_output/train/images'
+val: '/SSD/1_Postdoc_SKKU_2023/Research/cvpr2024/aicity/preprocessing_data/final_preprocessing_dataset/sample_output/val/images'
+
+nc: 5
+
+# Classes
+names: ['Bus','Bike','Car','Pedestrian','Truck']

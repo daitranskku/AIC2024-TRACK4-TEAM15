@@ -1,0 +1,7 @@
+train: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing/train2017/images'
+val: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing/val2017/images'
+
+nc: 5
+
+# Classes
+names: ['Bus','Bike','Car','Pedestrian','Truck']

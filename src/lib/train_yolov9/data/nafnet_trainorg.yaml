@@ -1,0 +1,13 @@
+path: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing'
+train: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing/train_txt_org.txt'
+val: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing/test_txt_org.txt'
+test: '/home/daitranskku/code/cvpr2024/aicity/update_may/AIC2024-TRACK4-TEAM15/src/preprocessing/test_txt_org.txt'
+nc: 5
+
+# Classes
+names:
+  0: 'Bus'
+  1: 'Bike'
+  2: 'Car'
+  3: 'Pedestrian'
+  4: 'Truck'
