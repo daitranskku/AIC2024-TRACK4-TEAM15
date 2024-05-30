@@ -107,10 +107,11 @@ Converted images will be saved in the following directories:
 ./sample_dataset/GSAD_Output/train
 ./sample_dataset/GSAD_Output/val
 ```
-### Generate the final dataset
+### Generate the final json  for training
+Modify the paths in [generate_final_json.py](./src/preprocessing/generate_final_json.py) to generate the final JSON annotation files:
 ```
 cd src/preprocessing
-python generate_final_dataset.py
+python generate_final_json.py
 ```
 
 ## Training YOLOv9
