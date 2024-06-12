@@ -10,7 +10,7 @@ Our methodology is visually encapsulated in the figures below, demonstrating our
 ![figure2](./figures/sample_results.png)
 
 ## Updates
-Our paper is posted on [arXiv](https://arxiv.org/abs/2404.10078)!
+Our paper is published on [CVPRw2024](https://openaccess.thecvf.com/content/CVPR2024W/AICity/html/Tran_Low-Light_Image_Enhancement_Framework_for_Improved_Object_Detection_in_Fisheye_CVPRW_2024_paper.html)!
 
 ## Installation
 Here is the list of libraries used in this project:
@@ -207,9 +207,23 @@ ORG_CVPR_DIR = '{ABSOLUTE_DIR}/AIC2024-TRACK4-TEAM15/sample_dataset/CVPR_test'
 python src/inference4submission.py
 ```
 
+## Ciation
+```
+@InProceedings{Tran_2024_CVPR,
+    author    = {Tran, Dai Quoc and Aboah, Armstrong and Jeon, Yuntae and Shoman, Maged and Park, Minsoo and Park, Seunghee},
+    title     = {Low-Light Image Enhancement Framework for Improved Object Detection in Fisheye Lens Datasets},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2024},
+    pages     = {7056-7065}
+}
+```
+
 ## Contact
 
 If you have any questions, please feel free to contact Dai Tran [(daitran@skku.edu)](daitran@skku.edu).
+
+
 
 
 
